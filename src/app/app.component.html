@@ -20,6 +20,7 @@
 </div>
 
 
+
 <div>
   <span>
     Name : {{name}}
@@ -81,4 +82,45 @@
 <ng-template #underweight>
   <span>    You are underweight
 </span>
+</ng-template>
+
+
+
+<hr>
+<div>
+  <h3>Enter a sentence: {{userInput}}</h3>
+</div>
+<div>
+  <input type="text" [(ngModel)]="userInput" )>
+</div>
+
+<button (click)="countCharaters()">
+   View character length
+</button>
+
+<div>
+  <h2>
+    Character count : {{characterCount}}
+  </h2>
+</div>
+
+
+
+<div *ngIf="characterCount < 5 else goodBlock">
+  <span>
+    Too short
+  </span>
+</div>
+
+<ng-template #goodBlock>
+  <div *ngIf="characterCount >= 5 && characterCount < 15 else longBlock">    <span>
+      Good
+    </span>
+  </div>
+</ng-template>
+
+<ng-template #longBlock>
+  <span>
+    Too long
+  </span>
 </ng-template>

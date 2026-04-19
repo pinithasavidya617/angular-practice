@@ -12,6 +12,10 @@ export class AppComponent {
   height = 0;
   weight = 0;
   bmi = 0;
+  userInput = "";
+  characterCount = 0;
+  message = "";
+
 
   constructor(){
 
@@ -34,4 +38,7 @@ export class AppComponent {
     this.bmi = this.weight / (heightInMeters ** 2);
   }
 
+  public countCharaters(){
+    this.characterCount = this.userInput.length;
+  }
 }
