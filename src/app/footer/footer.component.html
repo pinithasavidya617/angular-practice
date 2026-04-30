@@ -1,0 +1,14 @@
+<div>
+  <span>Body inside div</span>
+</div>
+<ng-container *ngIf="showBody">
+  <span>Body outside div</span>
+  <span>Body 1</span>
+  <span>Body 2</span>
+</ng-container>
+
+<span>Body 3</span>
+
+<ng-template>
+  <span>This is dynamic</span>
+</ng-template>
