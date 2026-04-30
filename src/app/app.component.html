@@ -1,126 +1,155 @@
 
-<h2>Counter : {{ counter }}</h2>
+<!--<h2>Counter : {{ counter }}</h2>-->
 
-<div>
-  <button (click)="increment()">Click me</button>
-</div>
+<!--<div>-->
+<!--  <button (click)="increment()">Click me</button>-->
+<!--</div>-->
 
-<div>
-  <h3>This number is {{evenOrOdd}}</h3>
-</div>
+<!--<div>-->
+<!--  <h3>This number is {{evenOrOdd}}</h3>-->
+<!--</div>-->
 
-<div *ngIf="evenOrOdd === 'Even' else xyz">
-  <span>This is an Even number</span>
-</div>
-
-
-<!--Do a structural change in dom-->
-<div [ngStyle]="{display : evenOrOdd === 'Even' ? 'block' : 'none'}" ]>
-  <span>ABC</span>
-</div>
+<!--<div *ngIf="evenOrOdd === 'Even' else xyz">-->
+<!--  <span>This is an Even number</span>-->
+<!--</div>-->
 
 
-
-<div>
-  <span>
-    Name : {{name}}
-  </span>
-</div>
-
-<div>
-  <input type="text" [(ngModel)]="name" >
-  <!--  two way binding-->
-</div>
-
-<ng-template #xyz>
-  <span>Ajt</span>
-</ng-template>
-
-
-<hr>
-
-
-<div>
-  <h3>
-    Please enter your height : {{height}}cm;
-  </h3>
-</div>
-<div>
-  <input type="text" [(ngModel)]="height" ]>
-</div>
-
-<div>
-  <h3>
-    Please enter your weight : {{weight}}kg;
-  </h3>
-</div>
-<div>
-  <input type="text" [(ngModel)]="weight" ]>
-</div>
-
-<div>
-  <h3>
-    Your height is {{height}} cm and weight is {{weight}}kg;
-  </h3>
-</div>
-
-<div>
-  <h2>
-    BMI : {{bmi}}
-  </h2>
-</div>
-<div *ngIf="bmi >= 25 else underweight">
-  <h3>
-    You are overweight
-  </h3>
-</div>
-
-<button (click)="bmiCal()">
-  Calculate BMI
-</button>
-
-<ng-template #underweight>
-  <span>    You are underweight
-</span>
-</ng-template>
+<!--&lt;!&ndash;Do a structural change in dom&ndash;&gt;-->
+<!--<div [ngStyle]="{display : evenOrOdd === 'Even' ? 'block' : 'none'}" ]>-->
+<!--  <span>ABC</span>-->
+<!--</div>-->
 
 
 
-<hr>
-<div>
-  <h3>Enter a sentence: {{userInput}}</h3>
-</div>
-<div>
-  <input type="text" [(ngModel)]="userInput" )>
-</div>
+<!--<div>-->
+<!--  <span>-->
+<!--    Name : {{name}}-->
+<!--  </span>-->
+<!--</div>-->
 
-<button (click)="countCharaters()">
-   View character length
-</button>
+<!--<div>-->
+<!--  <input type="text" [(ngModel)]="name" >-->
+<!--  &lt;!&ndash;  two way binding&ndash;&gt;-->
+<!--</div>-->
 
-<div>
-  <h2>
-    Character count : {{characterCount}}
-  </h2>
-</div>
+<!--<ng-template #xyz>-->
+<!--  <span>Ajt</span>-->
+<!--</ng-template>-->
 
 
+<!--<hr>-->
 
-<div *ngIf="characterCount < 5 else goodBlock">
-  <span>
-    Too short
-  </span>
-</div>
 
-<ng-template #goodBlock>
-  <div *ngIf="characterCount >= 5 && characterCount < 15 else longBlock">    <span>
-      Good
-    </span>
+<!--<div>-->
+<!--  <h3>-->
+<!--    Please enter your height : {{height}}cm;-->
+<!--  </h3>-->
+<!--</div>-->
+<!--<div>-->
+<!--  <input type="text" [(ngModel)]="height" ]>-->
+<!--</div>-->
+
+<!--<div>-->
+<!--  <h3>-->
+<!--    Please enter your weight : {{weight}}kg;-->
+<!--  </h3>-->
+<!--</div>-->
+<!--<div>-->
+<!--  <input type="text" [(ngModel)]="weight" ]>-->
+<!--</div>-->
+
+<!--<div>-->
+<!--  <h3>-->
+<!--    Your height is {{height}} cm and weight is {{weight}}kg;-->
+<!--  </h3>-->
+<!--</div>-->
+
+<!--<div>-->
+<!--  <h2>-->
+<!--    BMI : {{bmi}}-->
+<!--  </h2>-->
+<!--</div>-->
+<!--<div *ngIf="bmi >= 25 else underweight">-->
+<!--  <h3>-->
+<!--    You are overweight-->
+<!--  </h3>-->
+<!--</div>-->
+
+<!--<button (click)="bmiCal()">-->
+<!--  Calculate BMI-->
+<!--</button>-->
+
+<!--<ng-template #underweight>-->
+<!--  <span>    You are underweight-->
+<!--</span>-->
+<!--</ng-template>-->
+
+
+
+
+
+
+
+
+<!--<hr>-->
+<!--<div>-->
+<!--  <h3>Enter a sentence: {{userInput}}</h3>-->
+<!--</div>-->
+<!--<div>-->
+<!--  <input type="text" [(ngModel)]="userInput" )>-->
+<!--</div>-->
+
+<!--<button (click)="countCharaters()">-->
+<!--   View character length-->
+<!--</button>-->
+
+<!--<div>-->
+<!--  <h2>-->
+<!--    Character count : {{characterCount}}-->
+<!--  </h2>-->
+<!--</div>-->
+
+
+
+<!--<div *ngIf="characterCount < 5 else goodBlock">-->
+<!--  <span>-->
+<!--    Too short-->
+<!--  </span>-->
+<!--</div>-->
+
+<!--<ng-template #goodBlock>-->
+<!--  <div *ngIf="characterCount >= 5 && characterCount < 15 else longBlock">    <span>-->
+<!--      Good-->
+<!--    </span>-->
+<!--  </div>-->
+<!--</ng-template>-->
+
+<!--<ng-template #longBlock>-->
+<!--  <span>-->
+<!--    Too long-->
+<!--  </span>-->
+<!--</ng-template>-->
+
+
+
+<div class="container">
+
+  <div class="header">
+    <app-header></app-header>
   </div>
-</ng-template>
 
-<ng-template #longBlock>
-  <span>
-    Too long
-  </span>
-</ng-template>
+  <div class="main">
+    <div class="sidebar">
+      <app-side-nav></app-side-nav>
+    </div>
+
+    <div class="content">
+      <app-content></app-content>
+    </div>
+  </div>
+
+  <div class="footer">
+    <app-footer></app-footer>
+  </div>
+
+</div>
