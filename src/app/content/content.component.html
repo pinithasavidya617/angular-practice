@@ -1,7 +1,21 @@
 <div class="content">
-  <div class="content-header">Header</div>
-  <div class="content-main">
-    <div class="content-side">Side</div>
-    <div class="content-body">Body</div>
+<!--  <div class="content-header">Header</div>-->
+<!--  <div class="content-main">-->
+<!--    <div class="content-side">Side</div>-->
+<!--    <div class="content-body">Body</div>-->
+<!--  </div>-->
+
+  <div *ngFor="let student of students; let i = index">
+    <ng-container *ngIf="searchText === '' || student.name.includes(searchText) ">
+
+      <span>Name : {{student.name}}</span>
+      <span>Age : {{student.age}}</span>
+      <span>Address : {{student.address}}</span>
+    </ng-container>
   </div>
+  <input type="text" [(ngModel)]="searchText" ]>
+
+
 </div>
+
+
