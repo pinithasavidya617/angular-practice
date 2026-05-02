@@ -15,4 +15,10 @@ export class ContentComponent {
       {name : "mammal", age: 89, address: "Colombo"},
 
     ]
+
+  childEvent(event: any){
+      console.log("In parent component");
+      console.log(event);
+
+  }
 }

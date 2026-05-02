@@ -7,7 +7,7 @@
 
   <div *ngFor="let student of students; let i = index">
     <ng-container *ngIf="searchText === '' || student.name.includes(searchText) ">
-      <app-student [student]="student"></app-student>
+      <app-student [student]="student" [i]="i" (onStudentClick)="childEvent($event)" )></app-student>
     </ng-container>
   </div>
   <input type="text" [(ngModel)]="searchText" ]>
